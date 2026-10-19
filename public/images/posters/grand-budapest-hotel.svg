@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9d174d"/>
+      <stop offset="1" stop-color="#2a0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="85" fill="#fbbf24" opacity="0.25"/>
+  <circle cx="180" cy="160" r="46" fill="#fbbf24" opacity="0.35"/>
+  <rect x="0" y="380" width="300" height="70" fill="#000000" opacity="0.35"/>
+  <text x="150" y="278.4" text-anchor="middle" font-size="36" font-weight="800" fill="#ffffff">The Grand</text>
+  <text x="150" y="319.79999999999995" text-anchor="middle" font-size="36" font-weight="800" fill="#ffffff">Budapest Hotel</text>
+  <text x="150" y="410" text-anchor="middle" font-size="16" fill="#fbbf24" font-weight="600">Comédie · 2014</text>
+  <text x="150" y="434" text-anchor="middle" font-size="11" fill="#ffffff" opacity="0.6" letter-spacing="3">CINEHUB</text>
+</svg>

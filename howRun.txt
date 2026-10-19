@@ -1,0 +1,120 @@
+=====================================================================
+  CineHub - Comment lancer le projet (Windows CMD et Ubuntu)
+=====================================================================
+
+Prérequis : Node.js 20 ou plus récent (avec npm).
+Vérifier :   node --version     et     npm --version
+
+
+---------------------------------------------------------------------
+  A) WINDOWS (Invite de commandes - cmd)
+---------------------------------------------------------------------
+
+1. Aller dans le dossier du projet
+   cd C:\Users\medaminenasri\Desktop\work\pfe\module\v1
+
+2. Installer les dépendances (une seule fois)
+   npm install
+
+3. Créer les fichiers de configuration (une seule fois, s'ils n'existent pas)
+   copy .env.example .env
+   copy .env.example .env.local
+
+4. Créer la base SQLite + ajouter les 15 films (une seule fois)
+   npx prisma migrate dev
+   (si le catalogue est vide :  npx prisma db seed)
+
+5a. Lancer en mode développement
+   npm run dev
+
+5b. OU lancer en mode production (nécessaire pour la PWA / hors ligne)
+   npm run build
+   npm run start
+
+6. Ouvrir dans le navigateur :  http://localhost:3000
+   Arrêter le serveur :  Ctrl + C
+
+
+---------------------------------------------------------------------
+  B) UBUNTU (Terminal)
+---------------------------------------------------------------------
+
+0. Installer Node.js si besoin (version 20 ou plus)
+   sudo apt update
+   sudo apt install -y curl
+   curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+   sudo apt install -y nodejs
+
+1. Aller dans le dossier du projet (adapter le chemin)
+   cd ~/cinehub/v1
+
+2. Installer les dépendances (une seule fois)
+   npm install
+
+3. Créer les fichiers de configuration (une seule fois)
+   cp .env.example .env
+   cp .env.example .env.local
+
+4. Créer la base SQLite + ajouter les 15 films (une seule fois)
+   npx prisma migrate dev
+   (si le catalogue est vide :  npx prisma db seed)
+
+5a. Lancer en mode développement
+   npm run dev
+
+5b. OU lancer en mode production
+   npm run build
+   npm run start
+
+6. Ouvrir dans le navigateur :  http://localhost:3000
+   Arrêter le serveur :  Ctrl + C
+
+
+---------------------------------------------------------------------
+  C) COMMANDES UTILES (Windows et Ubuntu)
+---------------------------------------------------------------------
+
+Tests automatiques des API (le serveur doit être lancé dans un autre terminal) :
+   npm run test:api
+
+Vérifier le code :
+   npm run lint
+
+Voir le contenu de la base dans le navigateur :
+   npx prisma studio
+
+Remettre la base à zéro (supprime TOUTES les données) :
+   Windows :  del prisma\dev.db
+   Ubuntu  :  rm prisma/dev.db
+   puis    :  npx prisma migrate dev
+
+
+---------------------------------------------------------------------
+  D) ASSISTANT IA (optionnel)
+---------------------------------------------------------------------
+
+Mettre la clé dans le fichier .env.local :
+   ANTHROPIC_API_KEY="votre-clé"
+Puis redémarrer le serveur (Ctrl + C, puis npm run dev ou npm run start).
+Sans clé, l'assistant fonctionne en mode "filtrage simple (sans IA)".
+
+
+---------------------------------------------------------------------
+  E) PROBLÈMES FRÉQUENTS
+---------------------------------------------------------------------
+
+- "Port 3000 already in use" : un autre serveur tourne déjà.
+    Fermer l'autre terminal, ou lancer sur un autre port :
+    npm run dev -- -p 3001
+
+- Catalogue vide :  npx prisma db seed
+
+- Erreur Prisma "Cannot find module .prisma/client" :
+    npx prisma generate
+
+- Le mode hors ligne ne marche pas :
+    il faut utiliser npm run build + npm run start (pas npm run dev),
+    et visiter les pages une première fois avec la connexion.
+
+- Avertissement npm "allow-scripts" : normal, les scripts de Prisma et
+  esbuild sont déjà autorisés dans package.json.

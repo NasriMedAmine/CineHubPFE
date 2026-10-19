@@ -1,0 +1,101 @@
+i want prompt for claude :
+
+path final output project : 
+C:\Users\medaminenasri\Desktop\work\pfe\module\v1
+
+
+act when u coding like u are student not a pro 
+
+
+01:prsentation du project :
+CineHub est une aplication web progressive permettant de decouviri des films , partages de fiches,publier des avis
+e gérer une bibleotheque personelle
+
+02:objectif et acteur : 
+
+Objectif : 
+-developper avect next.js et typescript 
+-interface responsive mobile first 
+-CRUD et perisistance des donees
+-PWA installable avec mode hors ligne
+-integration ia cote serveur
+-depoiement HTTPS
+
+
+Visteur:
+-consulter le catalogue et les details,doit s'inscrire pour intergir 
+
+
+Utilisateur authentifié : 
+-gere son profil,ses films,ses favoris et ses avis
+
+
+
+
+03:Gestion des comptes utilisateurs :
+F01 - inscription : nom,email et mot de passe; validation
+F02 - connexion : authentification avec les identifiants 
+F03- deconnexion : fermuture securisé de la session
+F04:profil : consulter et modifier son profil
+
+
+
+04:Catalague de films :
+
+Données d'un film :
+-titre et affiche 
+-description
+-genre et année de sortie
+'realisateur et duree
+-note moyenne
+
+
+function:
+F06:affiche le catalogue
+F07:consulter le detail
+F08:recherche par titre
+
+
+
+05:CRUD :
+
+
+06: fonctionnalite suplementaire -assistant ia :
+Parcours:
+-utilisateur decrit ses preferences 
+-le serveur transmet la demande au service ia 
+-ia propose des films avec une justification
+-application affiche les resultats
+
+
+
+07 : PWA-installation et manifeste : 
+Manifest : 
+-nom,nom court,icones,theme,mode d'affichage
+
+Icone:
+-icones adaptees a lintsallation
+
+HTTPS:
+application accessible en HTTPS
+
+Installation : 
+demonstration sur navigateur ou appareil compatible
+
+
+
+
+08:modele de donnee proposé :
+user : id , name , email , createdAt 
+movie : id , title , genre , releaseYear , createdAt
+
+
+
+
+
+
+
+
+
+add readme detaille for teacher and be as student not pro in code , so i want code readable human 
+

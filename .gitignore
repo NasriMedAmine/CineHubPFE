@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Base de données SQLite locale
+prisma/*.db
+prisma/*.db-journal
+
+# Variables d'environnement (contiennent des secrets)
+.env
+.env.local

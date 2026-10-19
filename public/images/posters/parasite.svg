@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f3f46"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <circle cx="121" cy="129" r="85" fill="#facc15" opacity="0.25"/>
+  <circle cx="179" cy="169" r="54" fill="#facc15" opacity="0.35"/>
+  <rect x="0" y="380" width="300" height="70" fill="#000000" opacity="0.35"/>
+  <text x="150" y="300" text-anchor="middle" font-size="36" font-weight="800" fill="#ffffff">Parasite</text>
+  <text x="150" y="410" text-anchor="middle" font-size="16" fill="#facc15" font-weight="600">Thriller · 2019</text>
+  <text x="150" y="434" text-anchor="middle" font-size="11" fill="#ffffff" opacity="0.6" letter-spacing="3">CINEHUB</text>
+</svg>
